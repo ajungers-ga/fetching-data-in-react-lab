@@ -1,3 +1,5 @@
+You can see this app at: https://ajungers-ga.github.io/fetching-data-in-react-lab/
+
 # Star Wars Starships App
 
 This React app was built as part of the **Fetching Data in React Lab** during my software engineering course. It connects to the [Star Wars API (SWAPI)](https://swapi.dev/) and displays a list of starships. Users can search for ships by name using a form. The project applies most of what i learned in the fetching data lessons, including making API calls with `fetch()`, using react hooks (`useState`, `useEffect`), and managing search input through controlled forms.

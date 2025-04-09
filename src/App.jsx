@@ -8,10 +8,10 @@
 // 1-4 = steps to creating a component
  // 1. Import dependencies
  import { useEffect, useState } from 'react'; // (useState) allows component to hold state. (useEffect) runs code AFTER the component mounts. Using this to fetch data on load
- import StarshipCard from './StarshipCard';  // importing (StarshipCard COMPONENT) from its origin. This component is uesed to display a chosen ships info      
+ //import StarshipCard from './StarshipCard';  // importing (StarshipCard COMPONENT) from its origin. This component is uesed to display a chosen ships info      (now commented out before i was using.map in the loop, using starshipcard inside starshiplist.jsx)
  import StarshipSearchForm from './StarshipSearchForm'; // importing StarshipSearchForm COMPONENT, this containst the 'search' input and submit btn
  import './App.css'; // importing my super cool styling (css is so much fun)
-
+ import StarshipList from './StarshipList';
  // 1.2. Define the component
  const App = () => { // defining the MAIN FUNCTIONAL COMPONENT of the app. Everything INSIDE this function controls display & how the app behaves
    // 1.3 Define state
@@ -98,8 +98,8 @@
        />
        <p>Currently showing {starships.length} starships</p>
  
-       {/* 3.2 Render Starship Cards */}
-       <div>
+    
+       {/* <div>
          {starships.map((ship, index) => (
            <StarshipCard
              key={index}
@@ -109,7 +109,9 @@
              manufacturer={ship.manufacturer}
            />
          ))}
-       </div>
+       </div> */}
+       <StarshipList starships={starships} />
+
      </div>
    );
  };

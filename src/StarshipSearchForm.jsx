@@ -1,28 +1,32 @@
-// 1. Import dependencies
-import React from 'react';
+/**
+ * FILE: StarshipSearchForm.jsx
+ * PURPOSE: Controlled form for searching starships
+ * Props received:
+ * - searchTerm (input value)
+ * - onSearchChange (callback for input change)
+ * - onSearchSubmit (callback for form submit)
+ */
 
-// 1.2. Define the component
+// 1. Import dependencies (none needed here)
+
+// 1.2 Define the component and receive props
 const StarshipSearchForm = ({ searchTerm, onSearchChange, onSearchSubmit }) => {
-  // 1.3 Define state (none needed here)
-
-  // 2. Define logic (all passed in as props)
-
-  // 3. Return JSX
-  return (
-    <form onSubmit={onSearchSubmit} style={{ marginBottom: '20px' }}>
-      <label>
-        Search for a starship:{' '}
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={onSearchChange}
-          placeholder="e.g. Falcon"
-        />
-      </label>
-      <button type="submit">Search</button>
-    </form>
-  );
-};
-
-// 4. Export the component
-export default StarshipSearchForm;
+    // 3. Return JSX
+    return (
+      <form onSubmit={onSearchSubmit}>
+        <div className="form-group">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={onSearchChange}
+            placeholder="Search for a starship"
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    );
+  };
+  
+  // 4. Export the component
+  export default StarshipSearchForm;
+  
